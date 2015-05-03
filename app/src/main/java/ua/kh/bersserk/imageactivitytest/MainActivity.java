@@ -54,7 +54,7 @@ public class MainActivity extends Activity {
         myTextView.setOnClickListener(new View.OnClickListener(){
 
             public void onClick(View v) {
-                myTextView.setText("снова какой-то текст");
+                myTextView.setText("TEXT");
             }
         });
 
