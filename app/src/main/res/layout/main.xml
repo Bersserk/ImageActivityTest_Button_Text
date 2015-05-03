@@ -36,5 +36,15 @@
         android:layout_below="@+id/myTextView"
         android:layout_centerHorizontal="true" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Показать Toast"
+        android:id="@+id/btnToast"
+        android:layout_below="@+id/myButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="57dp"
+        android:onClick="showToast" />
+
 
 </RelativeLayout>

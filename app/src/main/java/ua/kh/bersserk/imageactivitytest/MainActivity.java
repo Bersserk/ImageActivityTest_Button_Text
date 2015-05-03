@@ -2,12 +2,12 @@ package ua.kh.bersserk.imageactivitytest;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class MainActivity extends Activity {
@@ -20,12 +20,12 @@ public class MainActivity extends Activity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
         // найдем наше изображение
-       final ImageView sniperImg = (ImageView) findViewById(R.id.imageView);
+        final ImageView sniperImg = (ImageView) findViewById(R.id.imageView);
 
         //зададим метод OnClick для картинки;
         sniperImg.setOnClickListener(new View.OnClickListener() {
@@ -42,7 +42,7 @@ public class MainActivity extends Activity {
         myButton = (Button) findViewById(R.id.myButton);
 
         //зададим обработчик событий и метод OnClick для кнопки
-        myButton.setOnClickListener(new View.OnClickListener(){
+        myButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
                 myTextView.setText("Ку-ку ёпта!");
@@ -51,37 +51,25 @@ public class MainActivity extends Activity {
         });
 
         //зададим обработчик событий и метод OnClick для текста
-        myTextView.setOnClickListener(new View.OnClickListener(){
+        myTextView.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
                 myTextView.setText("TEXT");
             }
+
+
+
+
         });
-
-
-
-
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+    public void showToast(View view) {
+        //создаем и отображаем текстовое уведомление
+        int duration = Toast.LENGTH_LONG;
+        Toast toast2 = Toast.makeText(getApplicationContext(),
+                "всплывающие сообщение",
+                duration);
+        toast2.setGravity(Gravity.TOP, 0, 0);
+        toast2.show();
     }
 }
