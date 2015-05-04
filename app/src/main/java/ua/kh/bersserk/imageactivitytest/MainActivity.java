@@ -70,7 +70,7 @@ public class MainActivity extends Activity {
         //создаем и отображаем текстовое уведомление
         int duration = Toast.LENGTH_LONG;
         Toast toast2 = Toast.makeText(getApplicationContext(),
-                "всплывающие сообщение",
+                "Это картинка!",
                 duration);
         toast2.setGravity(Gravity.TOP, 0, 0);
         toast2.show();
