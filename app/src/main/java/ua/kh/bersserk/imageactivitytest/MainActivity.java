@@ -28,14 +28,17 @@ public class MainActivity extends Activity {
         final ImageView sniperImg = (ImageView) findViewById(R.id.imageView);
 
         //зададим метод OnClick для картинки;
-        sniperImg.setOnClickListener(new View.OnClickListener() {
+        sniperImg.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
-            public void onClick(View v) {
-                //логика поиска текущей картинки и замены на другую
+            public boolean onLongClick(View v) {
                 tp = !tp;
                 sniperImg.setImageResource(tp ? R.drawable.sniper : R.drawable.oficer);
+                return false;
             }
         });
+
+
+
 
         //найдем текст и кнопку
         myTextView = (TextView) findViewById(R.id.myTextView);
