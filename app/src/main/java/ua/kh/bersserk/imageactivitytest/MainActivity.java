@@ -29,6 +29,7 @@ public class MainActivity extends Activity {
         // находим наши кнопки
         Button myButton1 = (Button) findViewById(R.id.myButton1);
         Button myButton2 = (Button) findViewById(R.id.myButton2);
+        myTextView = (TextView)findViewById(R.id.myTextView);
 
         //устанавливаем общий обработчик
         View.OnClickListener onClickListener = new View.OnClickListener() {
