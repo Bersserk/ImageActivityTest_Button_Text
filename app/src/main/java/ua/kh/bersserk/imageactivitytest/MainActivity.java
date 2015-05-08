@@ -20,6 +20,7 @@ public class MainActivity extends Activity {
     TextView myTextView;
 
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,9 +43,7 @@ public class MainActivity extends Activity {
                     case R.id.myButton2:
                         myTextView.setText("");
                         break;
-
                 }
-
             }
         };
 
@@ -62,19 +61,18 @@ public class MainActivity extends Activity {
                 sniperImg.setImageResource(tp ? R.drawable.sniper : R.drawable.oficer);
                 return false;
             }
+        });
+}
 
-
-            public void showToast(View view) {
-                //создаем и отображаем текстовое уведомление
-                int duration = Toast.LENGTH_LONG;
-                Toast toast2 = Toast.makeText(getApplicationContext(),
-                        "Это картинка!",
-                        duration);
-                toast2.setGravity(Gravity.TOP, 0, 0);
-                toast2.show();
-            }
-            });
-        }
+    public void showToast(View view) {
+        //создаем и отображаем текстовое уведомление
+        Toast toast = Toast.makeText(getApplicationContext(),
+                "Это картинка!",
+                Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.TOP, 0, 0);
+        toast.show();
     }
+}
+
 
 

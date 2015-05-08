@@ -28,24 +28,36 @@
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true" />
 
-    <Button
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/myButton1"
-        android:id="@+id/myButton1"
-        android:layout_marginTop="56dp"
+        android:id="@+id/linearLayout"
+        android:layout_marginTop="45dp"
+        android:layout_alignWithParentIfMissing="false"
+        android:baselineAligned="false"
         android:layout_below="@+id/myTextView"
-        android:layout_toLeftOf="@+id/myTextView"
-        android:layout_toStartOf="@+id/myTextView" />
+        android:layout_centerHorizontal="true">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/myButton2"
-        android:id="@+id/myButton2"
-        android:layout_alignBottom="@+id/myButton1"
-        android:layout_toRightOf="@+id/myTextView"
-        android:layout_toEndOf="@+id/myTextView" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/myButton1"
+            android:id="@+id/myButton1"
+            android:layout_alignTop="@+id/linearLayout"
+            android:layout_toLeftOf="@+id/linearLayout"
+            android:layout_toStartOf="@+id/linearLayout"
+            android:layout_marginRight="20dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/myButton2"
+            android:id="@+id/myButton2"
+            android:layout_gravity="right"
+            android:layout_marginLeft="20dp" />
+
+    </LinearLayout>
 
 
 </RelativeLayout>
