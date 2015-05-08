@@ -5,6 +5,8 @@
     <string name="myTextView">TEXT</string>
     <string name="action_settings">Settings</string>
     <string name="sniper">sniperImg</string>
-    <string name="myButton">Куку, ёпта!</string>
+    <string name="myButton1">Button1</string>
+    <string name="myButton2">Button2</string>
+    <string name="textBtn1">какой-то текст</string>
 
 </resources>
