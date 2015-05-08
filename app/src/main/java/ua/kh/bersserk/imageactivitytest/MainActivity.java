@@ -2,12 +2,13 @@ package ua.kh.bersserk.imageactivitytest;
 
 import android.app.Activity;
 import android.os.Bundle;
-//import android.view.Gravity;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
-//import android.widget.ImageView;
+import android.widget.ImageView;
 import android.widget.TextView;
-//import android.widget.Toast;
+import android.widget.Toast;
+
 
 
 
@@ -15,10 +16,8 @@ public class MainActivity extends Activity {
 
     // объявим наши объекты.
 
-  //  public boolean tp;
+    public boolean tp;
     TextView myTextView;
-
-
 
 
     @Override
@@ -52,7 +51,7 @@ public class MainActivity extends Activity {
         myButton1.setOnClickListener(onClickListener);
         myButton2.setOnClickListener(onClickListener);
 
-        /* найдем наше изображение
+        // найдем наше изображение
         final ImageView sniperImg = (ImageView) findViewById(R.id.imageView);
 
         //зададим метод OnClick для картинки;
@@ -75,7 +74,7 @@ public class MainActivity extends Activity {
                 toast2.show();
             }
             });
-        } */
+        }
     }
-}
+
 
